@@ -11,10 +11,10 @@ use Symfony\Component\Mime\Email;
 
 class SendEmailCommand extends Command
 {
-    const ARGUMENT_FROM = 'from';
-    const ARGUMENT_TO = 'to';
-    const ARGUMENT_SUBJECT = 'subject';
-    const ARGUMENT_BODY = 'body';
+    protected const ARGUMENT_FROM = 'from';
+    protected const ARGUMENT_TO = 'to';
+    protected const ARGUMENT_SUBJECT = 'subject';
+    protected const ARGUMENT_BODY = 'body';
 
     /**
      * @var MailerInterface
