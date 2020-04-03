@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Symfony" default="build" basedir=".">
+    <target name="build" depends="unit, phpcs, phpmd, phpstan"/>
+    <target name="unit">
+        <exec executable="php" dir="${basedir}" failonerror="true">
+            <arg value="vendor/bin/phpunit" />
+        </exec>
+    </target>
+    <target name="coverage">
+        <exec executable="php" dir="${basedir}" failonerror="true">
+            <arg value="vendor/bin/phpunit" />
+            <arg value="--coverage-html" />
+            <arg value="tests/report" />
+        </exec>
+    </target>
+    <target name="phpcs">
+        <exec executable="php" dir="${basedir}" failonerror="true">
+            <arg value="vendor/bin/php-cs-fixer" />
+            <arg value="fix" />
+            <arg value="app/" />
+            <arg value="--dry-run" />
+        </exec>
+    </target>
+    <target name="phpmd">
+        <exec executable="php" dir="${basedir}" failonerror="true">
+            <arg value="vendor/bin/phpmd" />
+            <arg value="app/" />
+            <arg value="text" />
+            <arg value="phpmd.xml" />
+        </exec>
+    </target>
+    <target name="phpstan">
+        <exec executable="php" dir="${basedir}" failonerror="true">
+            <arg value="vendor/bin/phpstan" />
+            <arg value="analyse" />
+            <arg value="-l" />
+            <arg value="4" />
+            <arg value="app/" />
+        </exec>
+    </target>
+</project>
