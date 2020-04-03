@@ -27,7 +27,7 @@ class SendEmailCommand extends Command
     protected static $defaultName = 'app:send-email';
 
     /**
-     * @param MailerInterface $mailer
+     * {@inheritdoc}
      */
     public function __construct(MailerInterface $mailer)
     {
@@ -36,7 +36,7 @@ class SendEmailCommand extends Command
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     protected function configure()
     {
@@ -66,9 +66,8 @@ class SendEmailCommand extends Command
     }
 
     /**
-     * @param InputInterface $input
-     * @param OutputInterface $output
      * @return int
+     *
      * @throws \Symfony\Component\Mailer\Exception\TransportExceptionInterface
      */
     protected function execute(InputInterface $input, OutputInterface $output)
