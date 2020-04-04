@@ -11,6 +11,9 @@
     1. Require phpmd/phpmd package
     1. Require phpstan/phpstan-symfony package
     1. Add @codeCoverageIgnore annotation for app/Kernel.php
+1. Travis configuration
+    1. Composer install script
+    1. Ant build
 
 ### Laravel Steps
 1. Dev tools configuration
@@ -22,6 +25,11 @@
     1. Add @codeCoverageIgnore annotation for app/Http/*
     1. Add @codeCoverageIgnore annotation for app/Providers/*
     1. Fix phpstan notice for app/Http/Middleware/Authenticate.php
+1. Travis configuration
+    1. Composer install script
+    1. App key generation script
+    1. Create .env
+    1. Ant build
 
 ## Conclusion
 * Laravel requires more steps to configure dev tools
