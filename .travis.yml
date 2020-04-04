@@ -1,0 +1,9 @@
+language: php
+php:
+  - 7.2
+install: ant deps
+before_script:
+  - cd src/Symfony && composer install
+  - cd src/Laravel && composer install
+script:
+  ant -f src/Symfony/build.xml && ant -f src/Laravel/build.xml
