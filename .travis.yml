@@ -8,7 +8,6 @@ addons:
   apt:
     packages:
       - ant
-install: ant deps
 before_script:
   - cd src/Symfony && composer install
   - cd src/Laravel && composer install
