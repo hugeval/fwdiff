@@ -11,6 +11,7 @@ addons:
 before_script:
   - composer install -d src/Symfony
   - composer install -d src/Laravel
+  - cp src/Laravel/.env.example src/Laravel/.env
   - php src/Laravel/artisan key:generate
 script:
   ant -f src/Symfony/build.xml && ant -f src/Laravel/build.xml
