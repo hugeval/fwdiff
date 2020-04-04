@@ -9,7 +9,7 @@ addons:
     packages:
       - ant
 before_script:
-  - cd src/Symfony && composer install
-  - cd src/Laravel && composer install
+  - composer install -d src/Symfony
+  - composer install -d src/Laravel
 script:
   ant -f src/Symfony/build.xml && ant -f src/Laravel/build.xml
