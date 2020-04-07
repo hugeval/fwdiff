@@ -94,6 +94,9 @@
                     <a href="https://vapor.laravel.com">Vapor</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
+                <div>
+                    <a href="/login/google">Login via Google</a>
+                </div>
             </div>
         </div>
     </body>
