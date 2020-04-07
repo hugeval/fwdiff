@@ -3,6 +3,7 @@
 namespace App\Tests\Command;
 
 use App\Command\SendEmailCommand;
+use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -11,17 +12,17 @@ use Symfony\Component\Mailer\MailerInterface;
 class SendEmailCommandTest extends TestCase
 {
     /**
-     * @var MailerInterface
+     * @var MockObject|MailerInterface
      */
     protected $mailer;
 
     /**
-     * @var InputInterface
+     * @var MockObject|InputInterface
      */
     protected $input;
 
     /**
-     * @var OutputInterface
+     * @var MockObject|OutputInterface
      */
     protected $output;
 

@@ -6,7 +6,7 @@
 
 ## Steps
 ### Symfony Steps
-1. Create App\Command\SendEmailCommand, using appropriate documentation 
+1. Create App\Command\SendEmailCommand, using ./bin/console make:command SendEmail 
 1. Create App\Tests\Command\SendEmailCommandTest
 
 ### Laravel Steps
