@@ -1,2 +1,14 @@
 runtime: php72
 service: laravel
+env_variables:
+  APP_NAME:
+  APP_ENV: local
+  APP_KEY:
+  APP_DEBUG: true
+  APP_URL:
+  GOOGLE_CLIENT_ID:
+  GOOGLE_CLIENT_SECRET:
+  GOOGLE_REDIRECT:
+  APP_STORAGE: /tmp
+  VIEW_COMPILED_PATH: /tmp
+  SESSION_DRIVER: cookie
