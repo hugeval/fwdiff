@@ -6,12 +6,12 @@
 
 ## Steps
 ### Symfony Steps
-1. Create App\Command\SendEmailCommand, using ./bin/console make:command SendEmail 
-1. Create App\Tests\Command\SendEmailCommandTest
+1. Create `App\Command\SendEmailCommand`, using `./bin/console make:command SendEmail`. 
+1. Create `App\Tests\Command\SendEmailCommandTest`.
 
 ### Laravel Steps
-1. Create App\Console\Commands\SendEmailCommand, using ./artisan make:command SendEmailCommand
-1. Create Tests\Unit\App\Console\Commands\SendEmailCommandTest, using make:test SendEmailCommandTest
+1. Create `App\Console\Commands\SendEmailCommand`, using `./artisan make:command SendEmailCommand`.
+1. Create `Tests\Unit\App\Console\Commands\SendEmailCommandTest`, using `make:test SendEmailCommandTest`.
 
 ## Conclusion
 * Symfony console command definition is more explicit.

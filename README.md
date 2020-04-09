@@ -5,3 +5,4 @@
 ## [Configuration](docs/configuration.md)
 ## [Console](docs/console.md)
 ## [Mailer](docs/mailer.md)
+## [Oauth Authentication](docs/oauth_authentication.md)
