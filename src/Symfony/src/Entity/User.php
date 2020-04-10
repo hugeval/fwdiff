@@ -78,6 +78,15 @@ class User implements UserInterface, \Serializable
      */
     private $roles = [];
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(type="string", unique=true)
+     * @Assert\NotBlank()
+     * @Assert\Length(min=2, max=50)
+     */
+    private $googleId;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -141,6 +150,16 @@ class User implements UserInterface, \Serializable
     public function setRoles(array $roles): void
     {
         $this->roles = $roles;
+    }
+
+    public function getGoogleId()
+    {
+        return $this->googleId;
+    }
+
+    public function setGoogleId(string $googleId)
+    {
+        $this->googleId = $googleId;
     }
 
     /**

@@ -13,7 +13,7 @@ security:
         database_users:
             entity: { class: App\Entity\User, property: username }
         oauth_user_provider:
-            id: hwi_oauth.user.provider
+            id: App\Security\Provider\OAuthUserProvider
 
     # https://symfony.com/doc/current/security.html#a-authentication-firewalls
     firewalls:
@@ -22,7 +22,6 @@ security:
             security: false
 
         main:
-            provider: database_users
             # this firewall applies to all URLs
             pattern: ^/
 
@@ -33,6 +32,7 @@ security:
             # This allows the user to login by submitting a username and password
             # Reference: https://symfony.com/doc/current/security/form_login_setup.html
             form_login:
+                provider: database_users
                 # The route name that the login form submits to
                 check_path: security_login
                 # The name of the route where the login form lives
@@ -51,22 +51,20 @@ security:
                 # The name of the route to redirect to after logging out
                 target: homepage
             oauth:
+                provider: oauth_user_provider
                 resource_owners:
                     google:             '/oauth-login/check-google'
-                login_path:        '/oauth-login'
-                use_forward:       false
-                failure_path:      '/oauth-login'
+                login_path:        security_login
 
                 oauth_user_provider:
-                    service: hwi_oauth.user.provider
+                    service: App\Security\Provider\OAuthUserProvider
 
     # Used to restrict access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
         # this is a catch-all for the admin area
         # additional security lives in the controllers
-        - { path: '^/oauth-login', roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: '^/(%app_locales%)/admin', roles: ROLE_ADMIN }
+        - { path: '^/(%app_locales%)/admin', roles: ROLE_USER }
 
     role_hierarchy:
         ROLE_ADMIN: ROLE_USER
