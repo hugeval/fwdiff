@@ -16,4 +16,10 @@ class DefaultController extends AbstractController
             'controller_name' => 'DefaultController',
         ]);
     }
+
+
+    public function google()
+    {
+        return $this->redirectToRoute('homepage');
+    }
 }
