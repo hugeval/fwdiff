@@ -32,29 +32,6 @@ use Symfony\Component\HttpFoundation\Response;
  */
 class BlogControllerTest extends WebTestCase
 {
-    /**
-     * @dataProvider getUrlsForRegularUsers
-     */
-    public function testAccessDeniedForRegularUsers(string $httpMethod, string $url)
-    {
-        $client = static::createClient([], [
-            'PHP_AUTH_USER' => 'john_user',
-            'PHP_AUTH_PW' => 'kitten',
-        ]);
-
-        $client->request($httpMethod, $url);
-
-        $this->assertResponseStatusCodeSame(Response::HTTP_FORBIDDEN);
-    }
-
-    public function getUrlsForRegularUsers()
-    {
-        yield ['GET', '/en/admin/post/'];
-        yield ['GET', '/en/admin/post/1'];
-        yield ['GET', '/en/admin/post/1/edit'];
-        yield ['POST', '/en/admin/post/1/delete'];
-    }
-
     public function testAdminBackendHomePage()
     {
         $client = static::createClient([], [

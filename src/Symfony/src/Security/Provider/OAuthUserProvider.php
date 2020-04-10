@@ -25,11 +25,6 @@ class OAuthUserProvider extends \HWI\Bundle\OAuthBundle\Security\Core\User\OAuth
      */
     private $passwordEncoder;
 
-    /**
-     * @param EntityManagerInterface $entityManager
-     * @param UserRepository $userRepository
-     * @param UserPasswordEncoderInterface $passwordEncoder
-     */
     public function __construct(
         EntityManagerInterface $entityManager,
         UserRepository $userRepository,
@@ -41,7 +36,6 @@ class OAuthUserProvider extends \HWI\Bundle\OAuthBundle\Security\Core\User\OAuth
     }
 
     /**
-     * @param UserResponseInterface $response
      * @return User|\HWI\Bundle\OAuthBundle\Security\Core\User\OAuthUser|\Symfony\Component\Security\Core\User\UserInterface
      */
     public function loadUserByOAuthUserResponse(UserResponseInterface $response)

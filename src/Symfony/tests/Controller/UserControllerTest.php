@@ -55,30 +55,6 @@ class UserControllerTest extends WebTestCase
         yield ['GET', '/en/profile/change-password'];
     }
 
-    public function testEditUser()
-    {
-        $newUserEmail = 'admin_jane@symfony.com';
-
-        $client = static::createClient([], [
-            'PHP_AUTH_USER' => 'jane_admin',
-            'PHP_AUTH_PW' => 'kitten',
-        ]);
-        $crawler = $client->request('GET', '/en/profile/edit');
-        $form = $crawler->selectButton('Save changes')->form([
-            'user[email]' => $newUserEmail,
-        ]);
-        $client->submit($form);
-
-        $this->assertResponseRedirects('/en/profile/edit', Response::HTTP_FOUND);
-
-        /** @var User $user */
-        $user = $client->getContainer()->get('doctrine')->getRepository(User::class)->findOneBy([
-            'email' => $newUserEmail,
-        ]);
-        $this->assertNotNull($user);
-        $this->assertSame($newUserEmail, $user->getEmail());
-    }
-
     public function testChangePassword()
     {
         $newUserPassword = 'new-password';
