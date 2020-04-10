@@ -17,7 +17,9 @@ class DefaultController extends AbstractController
         ]);
     }
 
-
+    /**
+     * @Route("/oauth-login/check-google", name="google_login")
+     */
     public function google()
     {
         return $this->redirectToRoute('homepage');

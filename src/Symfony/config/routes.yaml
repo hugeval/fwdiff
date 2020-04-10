@@ -10,6 +10,6 @@ homepage:
     defaults:
         template: default/homepage.html.twig
         _locale: '%locale%'
-#google_login:
-#    controller: \App\Controller\DefaultController::google
-#    path: /oauth-login/check-google
+google_login:
+    controller: \App\Controller\DefaultController::google
+    path: /oauth-login/check-google
