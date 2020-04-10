@@ -25,6 +25,7 @@ use Symfony\Component\Security\Http\Util\TargetPathTrait;
  *
  * @author Ryan Weaver <weaverryan@gmail.com>
  * @author Javier Eguiluz <javier.eguiluz@gmail.com>
+ * @SuppressWarnings(PHPMD)
  */
 class SecurityController extends AbstractController
 {

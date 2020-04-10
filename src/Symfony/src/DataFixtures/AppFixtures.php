@@ -21,6 +21,9 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\String\Slugger\SluggerInterface;
 use function Symfony\Component\String\u;
 
+/**
+ * @SuppressWarnings(PHPMD)
+ */
 class AppFixtures extends Fixture
 {
     private $passwordEncoder;

@@ -46,6 +46,8 @@
             <arg value="analyse" />
             <arg value="-l" />
             <arg value="4" />
+            <arg value="-c" />
+            <arg value="phpstan.neon" />
             <arg value="src/" />
         </exec>
     </target>

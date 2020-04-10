@@ -26,6 +26,7 @@ use Twig\TwigFunction;
  *
  * @author Ryan Weaver <weaverryan@gmail.com>
  * @author Javier Eguiluz <javier.eguiluz@gmail.com>
+ * @SuppressWarnings(PHPMD)
  */
 class SourceCodeExtension extends AbstractExtension
 {

@@ -26,6 +26,7 @@ use function Symfony\Component\String\u;
  * See https://symfony.com/doc/current/form/create_custom_field_type.html
  *
  * @author Yonel Ceruto <yonelceruto@gmail.com>
+ * @SuppressWarnings(PHPMD)
  */
 class DateTimePickerType extends AbstractType
 {

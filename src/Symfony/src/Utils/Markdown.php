@@ -20,6 +20,7 @@ use HtmlSanitizer\SanitizerInterface;
  *
  * @author Ryan Weaver <weaverryan@gmail.com>
  * @author Javier Eguiluz <javier.eguiluz@gmail.com>
+ * @SuppressWarnings(PHPMD)
  */
 class Markdown
 {

@@ -25,6 +25,7 @@ use function Symfony\Component\String\u;
  * See https://symfony.com/doc/current/components/http_kernel.html#the-kernel-request-event
  *
  * @author Oleg Voronkovich <oleg-voronkovich@yandex.ru>
+ * @SuppressWarnings(PHPMD)
  */
 class RedirectToPreferredLocaleSubscriber implements EventSubscriberInterface
 {

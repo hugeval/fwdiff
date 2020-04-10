@@ -42,7 +42,7 @@ class OAuthUserProvider extends \HWI\Bundle\OAuthBundle\Security\Core\User\OAuth
     {
         $email = $response->getEmail();
         if ($email) {
-            /** @var \App\Entity\User $user */
+            /** @var \App\Entity\User|null $user */
             $user = $this->userRepository->findOneBy(['email' => $email]);
             if (!$user) {
                 $user = new User();

@@ -28,6 +28,7 @@ use Symfony\Component\String\Slugger\SluggerInterface;
  * @author Ryan Weaver <weaverryan@gmail.com>
  * @author Javier Eguiluz <javier.eguiluz@gmail.com>
  * @author Yonel Ceruto <yonelceruto@gmail.com>
+ * @SuppressWarnings(PHPMD)
  */
 class PostType extends AbstractType
 {

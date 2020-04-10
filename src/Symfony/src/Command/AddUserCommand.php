@@ -45,6 +45,7 @@ use function Symfony\Component\String\u;
  *
  * @author Javier Eguiluz <javier.eguiluz@gmail.com>
  * @author Yonel Ceruto <yonelceruto@gmail.com>
+ * @SuppressWarnings(PHPMD)
  */
 class AddUserCommand extends Command
 {
