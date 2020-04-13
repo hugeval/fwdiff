@@ -18,3 +18,7 @@ Route::get('/', function () {
 });
 Route::get('login/google', 'LoginController@redirectToProvider');
 Route::get('login/check-google', 'LoginController@handleProviderCallback');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
